@@ -1,0 +1,106 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const projects = [
+  {
+    id: 1,
+    category: 'Web Application',
+    title: 'DOCONNECT',
+    description:
+      'A comprehensive web platform featuring role-based JWT authentication, real-time chat functionality, and a highly responsive user interface.',
+    tags: ['React', 'Node', 'MongoDB', 'Socket'],
+  },
+  {
+    id: 2,
+    category: 'Desktop Software',
+    title: 'ACCOUNTING SYS',
+    description:
+      'A robust desktop application for financial management, featuring modules for fee collection, payroll management, and report generation.',
+    tags: ['C#', 'SQL Server', 'WinForms', 'RDLC'],
+  },
+  {
+    id: 3,
+    category: 'Hardware/IoT',
+    title: 'IOT COLOR DETECTION',
+    description:
+      'An embedded system project utilizing real-time sensor logic to detect and process colors, combining hardware interfaces with algorithms.',
+    tags: ['Arduino', 'Python', 'TCS3200', 'C++'],
+  },
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', stiffness: 100, damping: 15 },
+  },
+};
+
+const Projects = () => {
+  return (
+    <section id="projects" className="min-h-screen w-full flex flex-col justify-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div className="mb-10">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-display tracking-tight">
+          Projects
+        </h2>
+        <div className="h-1 w-12 bg-blue-500 rounded mt-2" />
+      </div>
+
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="grid grid-cols-1 md:grid-cols-3 gap-6"
+      >
+        {projects.map((project) => (
+          <motion.div
+            key={project.id}
+            variants={cardVariants}
+            whileHover={{
+              y: -8,
+              scale: 1.02,
+              borderColor: 'rgba(59, 130, 246, 0.5)',
+              boxShadow: '0 20px 25px -5px rgba(59, 130, 246, 0.15), 0 10px 10px -5px rgba(59, 130, 246, 0.05)',
+            }}
+            className="p-6 rounded-xl bg-zinc-900/30 border border-zinc-800/80 transition-all duration-300 flex flex-col justify-between backdrop-blur-sm group cursor-pointer"
+          >
+            <div>
+              <span className="text-xs font-mono text-blue-400 block mb-1 group-hover:text-blue-300 transition-colors">
+                {project.category}
+              </span>
+              <h3 className="text-lg font-bold text-white mb-2 font-display group-hover:text-blue-400 transition-colors">
+                {project.title}
+              </h3>
+              <p className="text-xs text-zinc-400 leading-relaxed mb-4 group-hover:text-zinc-300 transition-colors">
+                {project.description}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2 pt-2">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[10px] font-mono text-zinc-400 bg-zinc-900/80 border border-zinc-800 group-hover:border-zinc-700 px-2 py-0.5 rounded transition-all"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
+  );
+};
+
+export default Projects;
