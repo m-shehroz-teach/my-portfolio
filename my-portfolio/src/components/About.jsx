@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import shehrozImg from '../assets/Shehroz.png';
 
 const FileTextIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -93,7 +94,7 @@ const About = () => {
         <div className="lg:col-span-4 flex flex-col items-center text-center">
           <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-zinc-700 mb-4 shadow-xl">
             <img
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800"
+              src={shehrozImg}
               alt="Muhammad Shehroz"
               className="w-full h-full object-cover"
             />
