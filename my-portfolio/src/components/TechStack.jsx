@@ -59,7 +59,6 @@ const skillStyles = {
   'React.js': { border: 'border-cyan-400/20 hover:border-cyan-400/60 bg-cyan-950/10', text: 'text-cyan-400', font: 'font-mono font-semibold' },
   'Tailwind CSS': { border: 'border-teal-400/20 hover:border-teal-400/60 bg-teal-950/10', text: 'text-teal-400', font: 'font-mono' },
   'Framer Motion': { border: 'border-pink-500/20 hover:border-pink-500/60 bg-pink-950/10', text: 'text-pink-400', font: 'font-mono' },
-  'MongoDB': { border: 'border-emerald-500/20 hover:border-emerald-500/60 bg-emerald-950/10', text: 'text-emerald-400', font: 'font-mono font-semibold' },
   'MySQL': { border: 'border-sky-600/20 hover:border-sky-600/60 bg-sky-950/10', text: 'text-sky-400', font: 'font-mono' },
   'SQL Server': { border: 'border-red-500/20 hover:border-red-500/60 bg-red-950/10', text: 'text-red-400', font: 'font-mono' },
   'Mongoose': { border: 'border-red-700/20 hover:border-red-700/60 bg-red-950/10', text: 'text-red-400', font: 'font-mono' },
