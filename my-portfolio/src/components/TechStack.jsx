@@ -61,7 +61,6 @@ const skillStyles = {
   'Framer Motion': { border: 'border-pink-500/20 hover:border-pink-500/60 bg-pink-950/10', text: 'text-pink-400', font: 'font-mono' },
   'MySQL': { border: 'border-sky-600/20 hover:border-sky-600/60 bg-sky-950/10', text: 'text-sky-400', font: 'font-mono' },
   'SQL Server': { border: 'border-red-500/20 hover:border-red-500/60 bg-red-950/10', text: 'text-red-400', font: 'font-mono' },
-  'Mongoose': { border: 'border-red-700/20 hover:border-red-700/60 bg-red-950/10', text: 'text-red-400', font: 'font-mono' },
   'VS Code': { border: 'border-blue-500/20 hover:border-blue-500/60 bg-blue-950/10', text: 'text-blue-400', font: 'font-sans' },
   'Terminal': { border: 'border-zinc-400/20 hover:border-zinc-400/60 bg-zinc-900/10', text: 'text-zinc-300', font: 'font-mono' },
   'NPM': { border: 'border-red-500/20 hover:border-red-500/60 bg-red-950/10', text: 'text-red-400', font: 'font-sans' },
