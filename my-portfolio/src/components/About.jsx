@@ -66,7 +66,7 @@ const About = () => {
                 <div>
                   <h4 className="text-sm font-semibold text-white">BS in Computer Science</h4>
                   <p className="text-xs text-zinc-400">MNS University of Agriculture</p>
-                  <p className="text-[11px] font-mono text-zinc-500">2020 - 2024</p>
+                  <p className="text-[11px] font-mono text-zinc-500">2022 - 2026</p>
                 </div>
               </div>
             </div>
@@ -82,8 +82,8 @@ const About = () => {
               <div className="space-y-4 pl-11">
                 <div>
                   <h4 className="text-sm font-semibold text-white">Frontend Developer</h4>
-                  <p className="text-xs text-zinc-400">Software House / Freelance</p>
-                  <p className="text-[11px] font-mono text-zinc-500">2024 - Present</p>
+                  <p className="text-xs text-zinc-400">Freelance</p>
+                  <p className="text-[11px] font-mono text-zinc-500">2025 - Present</p>
                 </div>
               </div>
             </div>
