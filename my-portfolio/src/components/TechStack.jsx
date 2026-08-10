@@ -23,7 +23,7 @@ const techCategories = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
       </svg>
     ),
-    skills: ['MongoDB', 'MySQL', 'SQL Server', 'Mongoose'],
+    skills: ['MongoDB', 'MySQL', 'SQL Server'],
   },
   {
     title: 'Tools',
