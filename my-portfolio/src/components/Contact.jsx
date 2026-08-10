@@ -95,8 +95,8 @@ const Contact = () => {
                 <MailIcon className="w-4 h-4 text-blue-400" />
                 <div>
                   <p className="text-xs text-white font-medium">Email</p>
-                  <a href="mailto:shehroz.dev@gmail.com" className="text-xs text-zinc-400 hover:text-blue-400 transition-colors">
-                    shehroz.dev@gmail.com
+                  <a href="mailto:shehrozmuhammad360@gmail.com" className="text-xs text-zinc-400 hover:text-blue-400 transition-colors">
+                    shehrozmuhammad360@gmail.com
                   </a>
                 </div>
               </div>
@@ -105,7 +105,7 @@ const Contact = () => {
                 <PhoneIcon className="w-4 h-4 text-blue-400" />
                 <div>
                   <p className="text-xs text-white font-medium">Phone</p>
-                  <p className="text-xs text-zinc-400">+92 300 0000000</p>
+                  <p className="text-xs text-zinc-400">+92 333 6752317</p>
                 </div>
               </div>
 
