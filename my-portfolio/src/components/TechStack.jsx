@@ -11,7 +11,7 @@ const techCategories = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
       </svg>
     ),
-    skills: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React.js', 'Next.js', 'Redux', 'Tailwind CSS', 'Framer Motion'],
+    skills: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React.js', 'Tailwind CSS', 'Framer Motion'],
   },
   {
     title: 'Database',
@@ -35,7 +35,7 @@ const techCategories = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M11 4a2 2 0 114 0v1a2 2 0 01-2 2 2 2 0 01-2-2V4zm-6 8a2 2 0 114 0v1a2 2 0 01-2 2 2 2 0 01-2-2v-1zm12 0a2 2 0 114 0v1a2 2 0 01-2 2 2 2 0 01-2-2v-1z" />
       </svg>
     ),
-    skills: ['VS Code', 'Terminal', 'NPM', 'Yarn', 'Figma', 'Prettier'],
+    skills: ['VS Code', 'Terminal', 'NPM', 'Prettier'],
   },
   {
     title: 'Fundamentals',
@@ -57,8 +57,6 @@ const skillStyles = {
   'JavaScript': { border: 'border-yellow-500/20 hover:border-yellow-500/60 bg-yellow-950/10', text: 'text-yellow-400', font: 'font-mono' },
   'TypeScript': { border: 'border-sky-500/20 hover:border-sky-500/60 bg-sky-950/10', text: 'text-sky-400', font: 'font-mono' },
   'React.js': { border: 'border-cyan-400/20 hover:border-cyan-400/60 bg-cyan-950/10', text: 'text-cyan-400', font: 'font-mono font-semibold' },
-  'Next.js': { border: 'border-zinc-200/20 hover:border-zinc-200/60 bg-zinc-800/10', text: 'text-zinc-200', font: 'font-mono' },
-  'Redux': { border: 'border-purple-500/20 hover:border-purple-500/60 bg-purple-950/10', text: 'text-purple-400', font: 'font-mono' },
   'Tailwind CSS': { border: 'border-teal-400/20 hover:border-teal-400/60 bg-teal-950/10', text: 'text-teal-400', font: 'font-mono' },
   'Framer Motion': { border: 'border-pink-500/20 hover:border-pink-500/60 bg-pink-950/10', text: 'text-pink-400', font: 'font-mono' },
   'MongoDB': { border: 'border-emerald-500/20 hover:border-emerald-500/60 bg-emerald-950/10', text: 'text-emerald-400', font: 'font-mono font-semibold' },
@@ -68,9 +66,6 @@ const skillStyles = {
   'VS Code': { border: 'border-blue-500/20 hover:border-blue-500/60 bg-blue-950/10', text: 'text-blue-400', font: 'font-sans' },
   'Terminal': { border: 'border-zinc-400/20 hover:border-zinc-400/60 bg-zinc-900/10', text: 'text-zinc-300', font: 'font-mono' },
   'NPM': { border: 'border-red-500/20 hover:border-red-500/60 bg-red-950/10', text: 'text-red-400', font: 'font-sans' },
-  'Yarn': { border: 'border-blue-400/20 hover:border-blue-400/60 bg-blue-950/10', text: 'text-blue-400', font: 'font-sans' },
-  'Figma': { border: 'border-purple-400/20 hover:border-purple-400/60 bg-purple-950/10', text: 'text-purple-400', font: 'font-sans' },
-  'Prettier': { border: 'border-pink-400/20 hover:border-pink-400/60 bg-pink-950/10', text: 'text-pink-400', font: 'font-sans' },
 };
 
 const getSkillStyle = (skill) => {
