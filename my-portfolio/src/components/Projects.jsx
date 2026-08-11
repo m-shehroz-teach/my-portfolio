@@ -1,5 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Github, ExternalLink } from 'lucide-react';
+import portfolioImg from '../assets/Portfolio.png';
+import localHubImg from '../assets/LocalHub.png';
 
 const projects = [
   {
@@ -25,6 +28,28 @@ const projects = [
     description:
       'An embedded system project utilizing real-time sensor logic to detect and process colors, combining hardware interfaces with algorithms.',
     tags: ['Arduino', 'Python', 'TCS3200', 'C++'],
+  },
+  {
+    id: 4,
+    category: 'Web Application',
+    title: 'My Portfolio',
+    description:
+      'A personal developer portfolio website designed with sleek dark mode aesthetics, interactive 3D elements, smooth framer-motion animations, and responsive tailwind layout.',
+    image: portfolioImg,
+    github: 'https://github.com/m-shehroz-teach/my-portfolio',
+    demo: 'https://my-portfolio-m-shehroz-teach.vercel.app/',
+    tags: ['React', 'Framer Motion', 'TailwindCSS', 'Vite'],
+  },
+  {
+    id: 5,
+    category: 'Web Application',
+    title: 'LocalDrop',
+    description:
+      'A modern local file sharing hub allowing seamless peer-to-peer file transfers and collaboration over local networks.',
+    image: localHubImg,
+    github: 'https://github.com/m-shehroz-teach/localhub',
+    demo: 'https://localhub-ten.vercel.app/',
+    tags: ['React', 'Vite', 'TailwindCSS', 'P2P'],
   },
 ];
 
@@ -76,6 +101,15 @@ const Projects = () => {
             className="p-6 rounded-xl bg-zinc-900/30 border border-zinc-800/80 transition-all duration-300 flex flex-col justify-between backdrop-blur-sm group cursor-pointer"
           >
             <div>
+              {project.image && (
+                <div className="overflow-hidden rounded-lg mb-4 aspect-video bg-zinc-950/50 border border-zinc-800/50">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              )}
               <span className="text-xs font-mono text-blue-400 block mb-1 group-hover:text-blue-300 transition-colors">
                 {project.category}
               </span>
@@ -86,15 +120,47 @@ const Projects = () => {
                 {project.description}
               </p>
             </div>
-            <div className="flex flex-wrap gap-2 pt-2">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-[10px] font-mono text-zinc-400 bg-zinc-900/80 border border-zinc-800 group-hover:border-zinc-700 px-2 py-0.5 rounded transition-all"
-                >
-                  {tag}
-                </span>
-              ))}
+            
+            <div className="mt-auto">
+              <div className="flex flex-wrap gap-2 pt-2 mb-4">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[10px] font-mono text-zinc-400 bg-zinc-900/80 border border-zinc-800 group-hover:border-zinc-700 px-2 py-0.5 rounded transition-all"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {(project.github || project.demo) && (
+                <div className="flex gap-4 pt-3 border-t border-zinc-800/50">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-xs text-zinc-400 hover:text-white transition-colors"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Github size={14} />
+                      <span>Code</span>
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-xs text-blue-400 hover:text-blue-300 transition-colors ml-auto"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <ExternalLink size={14} />
+                      <span>Live Demo</span>
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           </motion.div>
         ))}
