@@ -14,6 +14,18 @@ const techCategories = [
     skills: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React.js', 'Tailwind CSS', 'Framer Motion'],
   },
   {
+    title: 'Backend',
+    level: 'Intermediate',
+    levelColor: 'text-blue-400',
+    description: 'Developing server-side application logic and APIs.',
+    icon: (
+      <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+      </svg>
+    ),
+    skills: ['Node.js', 'Express.js'],
+  },
+  {
     title: 'Database',
     level: 'Intermediate',
     levelColor: 'text-blue-400',
@@ -24,6 +36,19 @@ const techCategories = [
       </svg>
     ),
     skills: ['MongoDB', 'MySQL', 'SQL Server'],
+  },
+  {
+    title: 'Version Control',
+    level: 'Advanced',
+    levelColor: 'text-emerald-400',
+    description: 'Managing source code history and collaborating.',
+    icon: (
+      <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8 7a3 3 0 100-6 3 3 0 000 6zM8 17a3 3 0 100-6 3 3 0 000 6zM16 12a3 3 0 100-6 3 3 0 000 6z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8 7v4M8 13v4M16 9v2c0 1-1 2-2 2h-4" />
+      </svg>
+    ),
+    skills: ['Git', 'GitHub'],
   },
   {
     title: 'Tools',
@@ -59,11 +84,21 @@ const skillStyles = {
   'React.js': { border: 'border-cyan-400/20 hover:border-cyan-400/60 bg-cyan-950/10', text: 'text-cyan-400', font: 'font-mono font-semibold' },
   'Tailwind CSS': { border: 'border-teal-400/20 hover:border-teal-400/60 bg-teal-950/10', text: 'text-teal-400', font: 'font-mono' },
   'Framer Motion': { border: 'border-pink-500/20 hover:border-pink-500/60 bg-pink-950/10', text: 'text-pink-400', font: 'font-mono' },
+  'MongoDB': { border: 'border-emerald-500/20 hover:border-emerald-500/60 bg-emerald-950/10', text: 'text-emerald-400', font: 'font-mono' },
   'MySQL': { border: 'border-sky-600/20 hover:border-sky-600/60 bg-sky-950/10', text: 'text-sky-400', font: 'font-mono' },
   'SQL Server': { border: 'border-red-500/20 hover:border-red-500/60 bg-red-950/10', text: 'text-red-400', font: 'font-mono' },
   'VS Code': { border: 'border-blue-500/20 hover:border-blue-500/60 bg-blue-950/10', text: 'text-blue-400', font: 'font-sans' },
   'Terminal': { border: 'border-zinc-400/20 hover:border-zinc-400/60 bg-zinc-900/10', text: 'text-zinc-300', font: 'font-mono' },
   'NPM': { border: 'border-red-500/20 hover:border-red-500/60 bg-red-950/10', text: 'text-red-400', font: 'font-sans' },
+  'Prettier': { border: 'border-purple-500/20 hover:border-purple-500/60 bg-purple-950/10', text: 'text-purple-400', font: 'font-mono' },
+  'Node.js': { border: 'border-green-500/20 hover:border-green-500/60 bg-green-950/10', text: 'text-green-400', font: 'font-mono' },
+  'Express.js': { border: 'border-zinc-500/20 hover:border-zinc-500/60 bg-zinc-950/10', text: 'text-zinc-300', font: 'font-mono' },
+  'Git': { border: 'border-orange-600/20 hover:border-orange-600/60 bg-orange-950/10', text: 'text-orange-500', font: 'font-mono' },
+  'GitHub': { border: 'border-zinc-400/20 hover:border-zinc-400/60 bg-zinc-900/10', text: 'text-zinc-100', font: 'font-mono' },
+  'Responsive Design': { border: 'border-purple-500/20 hover:border-purple-500/60 bg-purple-950/10', text: 'text-purple-400', font: 'font-sans' },
+  'Cross-browser Compatibility': { border: 'border-pink-500/20 hover:border-pink-500/60 bg-pink-950/10', text: 'text-pink-400', font: 'font-sans' },
+  'Performance Optimization': { border: 'border-yellow-500/20 hover:border-yellow-500/60 bg-yellow-950/10', text: 'text-yellow-400', font: 'font-sans' },
+  'Component-Driven Architecture': { border: 'border-blue-500/20 hover:border-blue-500/60 bg-blue-950/10', text: 'text-blue-400', font: 'font-sans' },
 };
 
 const getSkillStyle = (skill) => {
