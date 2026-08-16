@@ -63,7 +63,7 @@ const Hero = () => {
         className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight mb-8 font-display"
       >
         <span className="bg-gradient-to-r from-blue-500 via-purple-400 to-pink-500 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-          Front-End Developer
+          Full-Stack Developer
         </span>
       </motion.h1>
 
