@@ -1,0 +1,30 @@
+# robots.txt for m-shehroz.dev
+
+# Allow general search engines and user-agent search assistants
+User-agent: *
+Allow: /
+
+# Allow AI Search Retrieval Bots (for answers & citation queries)
+User-agent: OAI-SearchBot
+Allow: /
+
+# Block AI Model Training Bots (training data collectors)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Omegabot
+Disallow: /
+
+Sitemap: https://m-shehroz.dev/sitemap.xml
