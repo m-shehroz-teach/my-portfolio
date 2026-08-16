@@ -27,8 +27,9 @@ const DiscordIcon = ({ className = "w-5 h-5" }) => (
   </svg>
 );
 
+const adjectives = ["A Dedicated", "An Amazing", "A Passionate", "A Creative"];
+
 const Hero = () => {
-  const adjectives = ["A Dedicated", "An Amazing", "A Passionate", "A Creative"];
   const [adjIndex, setAdjIndex] = useState(0);
 
   useEffect(() => {

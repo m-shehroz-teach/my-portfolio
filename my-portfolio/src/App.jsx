@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
-import Projects from './components/Projects';
-import TechStack from './components/TechStack';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+
+// Code split sections below the fold to improve LCP and overall bundle size
+const About = lazy(() => import('./components/About'));
+const Projects = lazy(() => import('./components/Projects'));
+const TechStack = lazy(() => import('./components/TechStack'));
+const Contact = lazy(() => import('./components/Contact'));
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -54,18 +56,18 @@ function App() {
     const sections = gsap.utils.toArray('section:not(#home)');
     sections.forEach((sec) => {
       gsap.fromTo(sec, 
-        { opacity: 0, y: 60 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: sec,
-            start: 'top 85%',
-            toggleActions: 'play none none reverse',
-          }
+      { opacity: 0, y: 60 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: sec,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
         }
+      }
       );
     });
 
@@ -86,10 +88,16 @@ function App() {
 
       <main className="relative z-10">
         <Hero />
-        <About />
-        <Projects />
-        <TechStack />
-        <Contact />
+        <Suspense fallback={
+          <div className="min-h-[400px] w-full flex items-center justify-center">
+            <div className="w-8 h-8 border-4 border-blue-500/20 border-t-blue-500 rounded-full animate-spin"></div>
+          </div>
+        }>
+          <About />
+          <Projects />
+          <TechStack />
+          <Contact />
+        </Suspense>
         <Footer />
       </main>
     </div>

@@ -97,6 +97,8 @@ const About = () => {
               src={shehrozImg}
               alt="Muhammad Shehroz"
               className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <h3 className="text-xl font-bold text-white mb-1 font-display">Muhammad Shehroz</h3>

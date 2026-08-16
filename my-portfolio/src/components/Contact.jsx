@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 
 const ContactInfoIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -35,7 +35,7 @@ const Contact = () => {
   const [result, setResult] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const onSubmit = async (event) => {
+  const onSubmit = useCallback(async (event) => {
     event.preventDefault();
     setIsSubmitting(true);
     setResult("Sending....");
@@ -62,7 +62,7 @@ const Contact = () => {
     } finally {
       setIsSubmitting(false);
     }
-  };
+  }, []);
 
   return (
     <section id="contact" className="min-h-screen w-full flex flex-col justify-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
