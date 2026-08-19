@@ -4,7 +4,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Footer from './components/Footer';
 import LiquidEther from './components/LiquidEther';
 
 // Code split sections below the fold to improve LCP and overall bundle size
@@ -116,7 +115,6 @@ function App() {
           <TechStack />
           <Contact />
         </Suspense>
-        <Footer />
       </main>
     </div>
   );
