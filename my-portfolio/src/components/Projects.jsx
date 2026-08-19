@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import portfolioImg from '../assets/Portfolio.png';
 import localHubImg from '../assets/LocalHub.png';
+import libraryImg from '../assets/Library.png';
 
 const GithubIcon = ({ size = 14 }) => (
   <svg
@@ -67,6 +68,17 @@ const projects = [
     github: 'https://github.com/m-shehroz-teach/localhub',
     demo: 'https://localhub-ten.vercel.app/',
     tags: ['React', 'Vite', 'TailwindCSS', 'P2P'],
+  },
+  {
+    id: 6,
+    category: 'Web Application',
+    title: 'Codex Archives',
+    description:
+      'A premium, real-time library management system providing robust book cataloging, transaction management, real-time circulation updates (via Pusher), and printable administrative reports.',
+    image: libraryImg,
+    github: 'https://github.com/m-shehroz-teach/library-management-system',
+    demo: 'https://client-sigma-hazel.vercel.app',
+    tags: ['React', 'Node.js', 'MongoDB', 'Pusher', 'TailwindCSS'],
   },
 ];
 
