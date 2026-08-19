@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
+import LiquidEther from './components/LiquidEther';
 
 // Code split sections below the fold to improve LCP and overall bundle size
 const About = lazy(() => import('./components/About'));
@@ -80,9 +81,26 @@ function App() {
   }, []);
   return (
     <div className="bg-[#0b0e11] text-white font-sans antialiased selection:bg-blue-500 selection:text-white relative min-h-screen">
-      {/* Global Background Grid and Glow Effect */}
-      <div className="fixed inset-0 bg-[linear-gradient(to_right,#33415515_1px,transparent_1px),linear-gradient(to_bottom,#33415515_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)] pointer-events-none z-0" />
-      <div className="fixed top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-blue-600/10 via-purple-600/10 to-pink-500/10 rounded-full blur-3xl pointer-events-none z-0" />
+      {/* Interactive LiquidEther Background */}
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, pointerEvents: 'none', opacity: 0.45 }}>
+        <LiquidEther
+          colors={[ '#1e3a8a', '#3b82f6', '#d946ef', '#0b0f19' ]}
+          mouseForce={18}
+          cursorSize={90}
+          isViscous={false}
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={24}
+          resolution={0.4}
+          isBounce={false}
+          autoDemo={true}
+          autoSpeed={0.4}
+          autoIntensity={2.0}
+          takeoverDuration={0.25}
+          autoResumeDelay={2500}
+          autoRampDuration={0.6}
+        />
+      </div>
 
       <Navbar />
 
